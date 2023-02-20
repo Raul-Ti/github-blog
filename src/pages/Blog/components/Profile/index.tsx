@@ -53,38 +53,38 @@ export function Profile() {
             ) : (
                 <>
                     <ProfilePicture src={profileData.avatar_url} />
-            <ProfileDeatils>
-                <header>
-                    <h1>{profileData.name}</h1>
+                    <ProfileDeatils>
+                        <header>
+                            <h1>{profileData.name}</h1>
 
-                    <ExternalLink text="Github" href={profileData.html_url} target="_blank" />
-                </header>
-                <p>
-                    {profileData.bio}
-                </p>
-                <ul>
-                    <li>
-                        <FontAwesomeIcon icon={faGithub} />
-                        {profileData.login}
-                    </li>
-                    
-                    {profileData.company&& (
-                    <li>
-                    <FontAwesomeIcon icon={faBuilding} />
-                    {profileData.company}
-                    </li>
-                    )}
+                            <ExternalLink text="Github" href={profileData.html_url} target="_blank" />
+                        </header>
+                        <p>
+                            {profileData.bio}
+                        </p>
+                        <ul>
+                            <li>
+                                <FontAwesomeIcon icon={faGithub} />
+                                {profileData.login}
+                            </li>
+                            
+                            {profileData.company&& (
+                            <li>
+                            <FontAwesomeIcon icon={faBuilding} />
+                            {profileData.company}
+                            </li>
+                            )}
 
-                    <li>
-                        <FontAwesomeIcon icon={faUserGroup} />
-                        {profileData.followers == 1? 
-                            (`${profileData.followers} seguidor`)
-                            :
-                            (`${profileData.followers} seguidores`)
-                        } 
-                    </li>
-                </ul>
-            </ProfileDeatils>
+                            <li>
+                                <FontAwesomeIcon icon={faUserGroup} />
+                                {profileData.followers == 1? 
+                                    (`${profileData.followers} seguidor`)
+                                    :
+                                    (`${profileData.followers} seguidores`)
+                                } 
+                            </li>
+                        </ul>
+                    </ProfileDeatils>
                 </>
             )}
         </ProfileContainer>

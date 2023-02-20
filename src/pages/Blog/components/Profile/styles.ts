@@ -11,6 +11,13 @@ export const ProfileContainer = styled.section`
     padding: 2rem 2.5rem;
     display: flex;
     gap: 2rem;
+
+
+    @media(max-width: 40.6rem){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 export const ProfilePicture = styled.img`
@@ -25,11 +32,20 @@ export const ProfileDeatils = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media(max-width: 40.6rem){
+        justify-content: center;
+    }
+
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0.5rem;
+
+        @media(max-width: 40.6rem){
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
 
         h1{
         font-size: ${({theme}) => theme.textSizes["title-title-l"]};
@@ -54,6 +70,14 @@ export const ProfileDeatils = styled.div`
                 width: 1.25rem;
                 height: 1.25rem;
                 color: ${({theme}) => theme.colors["base-label"]}
+            }
+        }
+
+        @media(max-width: 40.6rem){
+            justify-content:center;
+
+            li:last-child{
+                display: none;
             }
         }
     }
